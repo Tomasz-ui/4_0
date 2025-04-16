@@ -9,21 +9,21 @@ class Main {
       Scanner scanner = new Scanner(System.in);
       
       while(true) {
-        System.out.println("\n1. Dodaj studenta");
-        System.out.println("2. Wyświetl studentów");
+        System.out.println("\n1. Dodaj nowego studenta");
+        System.out.println("2. Wyświetl listę studentów");
         System.out.println("3. Wyjście");
-        System.out.print("Wybierz opcję: ");
+        System.out.print("Wybierz co chcesz zrobić: ");
         
         int choice = scanner.nextInt();
-        scanner.nextLine(); // consume newline
+        scanner.nextLine();
         
         if(choice == 1) {
-          System.out.print("Podaj imię studenta: ");
+          System.out.print("Podaj imię nowego studenta: ");
           String name = scanner.nextLine();
-          System.out.print("Podaj wiek studenta: ");
+          System.out.print("Podaj wiek nowego studenta: ");
           int age = scanner.nextInt();
           s.addStudent(new Student(name, age));
-          System.out.println("Student dodany!");
+          System.out.println("Nowy student dodany.");
         } 
         else if(choice == 2) {
           var students = s.getStudents();
@@ -38,7 +38,7 @@ class Main {
       
       scanner.close();
     } catch (IOException e) {
-      System.out.println("Wystąpił błąd: " + e.getMessage());
+      System.out.println("Wystąpił błąd, spróbuj ponownie: " + e.getMessage());
     }
   }
 }
