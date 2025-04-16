@@ -17,22 +17,25 @@ class Main {
         int choice = scanner.nextInt();
         scanner.nextLine();
         
-        if(choice == 1) {
-          System.out.print("Podaj imię nowego studenta: ");
-          String name = scanner.nextLine();
-          System.out.print("Podaj wiek nowego studenta: ");
-          int age = scanner.nextInt();
-          s.addStudent(new Student(name, age));
-          System.out.println("Nowy student dodany.");
-        } 
-        else if(choice == 2) {
-          var students = s.getStudents();
-          for(Student current : students) {
-            System.out.println(current.ToString());
-          }
-        }
-        else if(choice == 3) {
-          break;
+        switch(choice) {
+          case 1:
+            System.out.print("Podaj imię nowego studenta: ");
+            String name = scanner.nextLine();
+            System.out.print("Podaj wiek nowego studenta: ");
+            int age = scanner.nextInt();
+            s.addStudent(new Student(name, age));
+            System.out.println("Nowy student dodany.");
+            break;
+          case 2:
+            var students = s.getStudents();
+            for(Student current : students) {
+              System.out.println(current.ToString());
+            }
+            break;
+          case 3:
+            return;
+          default:
+            System.out.println("Nieprawidłowa opcja!");
         }
       }
       
