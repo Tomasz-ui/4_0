@@ -3,3 +3,4 @@ Janusz 40
 Krzysztof 20
 Janusz 40
 kuba 15
+222 12
