@@ -43,7 +43,7 @@ public class Student {
   public static Student Parse(String str) {
     String[] data = str.split(" ");
     if(data.length != 3) 
-      return new Student("Parse Error", -1, "2000-01-01");
+      return new Student("Brak danych", -1, "2000-01-01");
     return new Student(data[0], Integer.parseInt(data[1]), data[2]);
   }
 }

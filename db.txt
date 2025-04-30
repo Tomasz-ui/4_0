@@ -4,3 +4,7 @@ Krzysztof 20
 Janusz 40
 kuba 15
 222 12
+Jakub 20 2000-12-01
+Mati 22 2003-02-01
+Kacper 22 2003-01-02
+Kamil 23 2002-03-1
