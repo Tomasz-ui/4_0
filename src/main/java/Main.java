@@ -22,8 +22,16 @@ class Main {
           String name = scanner.nextLine();
           System.out.print("Podaj wiek nowego studenta: ");
           int age = scanner.nextInt();
-          s.addStudent(new Student(name, age));
-          System.out.println("Nowy student dodany");
+          scanner.nextLine();
+          System.out.print("Podaj datę urodzenia (RRRR-MM-DD): ");
+          String birthDate = scanner.nextLine();
+          
+          try {
+            s.addStudent(new Student(name, age, birthDate));
+            System.out.println("Nowy student dodany");
+          } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+          }
         } 
         else if(choice == 2) {
           var students = s.getStudents();
