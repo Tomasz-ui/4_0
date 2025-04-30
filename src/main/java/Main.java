@@ -11,7 +11,8 @@ class Main {
       while(true) {
         System.out.println("\n1. Dodaj nowego studenta");
         System.out.println("2. Wyświetl listę studentów");
-        System.out.println("3. Wyjście");
+        System.out.println("3. Wyszukaj studenta po imieniu");
+        System.out.println("4. Wyjście");
         System.out.print("Wybierz co chcesz zrobić: ");
         
         int choice = scanner.nextInt();
@@ -40,6 +41,19 @@ class Main {
           }
         }
         else if(choice == 3) {
+          System.out.print("Podaj imię studenta do wyszukania: ");
+          String searchName = scanner.nextLine();
+          Student found = s.findStudentByName(searchName);
+          if(found != null) {
+            System.out.println("Znaleziono studenta:");
+            System.out.println("Imię: " + found.GetName());
+            System.out.println("Wiek: " + found.GetAge());
+            System.out.println("Data urodzenia: " + found.GetBirthDate());
+          } else {
+            System.out.println("Nie znaleziono studenta o podanym imieniu");
+          }
+        }
+        else if(choice == 4) {
           break;
         }
       }
